@@ -11,7 +11,7 @@ class _02_RowColumnSumTest {
      *  A 2D array that holds 3, 1D arrays with each 1D array having 3 elements
      *  can be thought of a 3x3 matrix:
      *                 col0 col1 col2
-     *                  \/   \/   \/
+     *                   \/  \/  \/
      *          row 0  { 1,  2,  3 }
      *          row 1  { 4,  5,  6 }
      *          row 2  { 7,  8,  9 }
