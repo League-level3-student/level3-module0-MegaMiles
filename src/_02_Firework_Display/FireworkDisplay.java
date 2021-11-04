@@ -27,6 +27,8 @@ public class FireworkDisplay extends JPanel implements ActionListener {
 
     public static void main(String[] args) {
         new FireworkDisplay().start();
+        System.out.println("Width: " + WIDTH);
+        System.out.println("Height:" + HEIGHT);
     }
 
     public void start() {
@@ -37,6 +39,7 @@ public class FireworkDisplay extends JPanel implements ActionListener {
         WIDTH = Toolkit.getDefaultToolkit().getScreenSize().width;
         HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height;
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        
 
         buttonPanel = new JPanel();
         fireButton = new JButton("FIRE");
