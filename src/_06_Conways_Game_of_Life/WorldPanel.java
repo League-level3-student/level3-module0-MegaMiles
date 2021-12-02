@@ -81,6 +81,7 @@ public class WorldPanel extends JPanel implements MouseListener, ActionListener 
 		for (int i = 0; i < cells.length; i++) {
 			for (int j = 0; j < cells.length; j++) {
 				g.fillRect(j * cellSize, i * cellSize, cellSize, cellSize);
+				cells[i][j].draw(g);
 			}
 		}
 		// Draw the perimeter of the grid
@@ -175,7 +176,15 @@ public class WorldPanel extends JPanel implements MouseListener, ActionListener 
 		// location that was clicked. Each cell is a square with a length of
 		// cellSize, meaning it's possible to click inside of a cell. You
 		// have to determine the cell that was clicked from the pixel
-		// location and toggle the 'isAlive' variable for that cell.
+		// location and toggle the 'isAlive' variable for that cell. 
+if (cells[e.getY()/cellSize][e.getX()/cellSize].isAlive) {
+	cells[e.getY()/cellSize][e.getX()/cellSize].isAlive = false;	
+}
+else {
+	cells[e.getY()/cellSize][e.getX()/cellSize].isAlive = true;	
+}
+
+
 
 		repaint();
 	}

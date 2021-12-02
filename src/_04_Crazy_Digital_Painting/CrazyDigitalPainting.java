@@ -20,7 +20,7 @@ public class CrazyDigitalPainting {
 		// colors[i][j] = new Color(i % 256, (i * j) % 256, j % 256);
 for (int i = 0; i < colors.length; i++) {
 for (int j = 0; j < colors[i].length; j++) {
-colors[i][j] = new Color(j % 12, (i * j) % 2, j % 103);	
+colors[i][j] = new Color(j % 146, (i * 98) % 2, j % 134);	
 }
 }
 		// 5. Come up with your own pattern to make a cool crazy image.

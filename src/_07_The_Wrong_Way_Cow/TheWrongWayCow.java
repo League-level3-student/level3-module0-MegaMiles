@@ -48,12 +48,68 @@
 
 package _07_The_Wrong_Way_Cow;
 
-public class TheWrongWayCow {
+import java.util.Iterator;
 
-    public static int[] findWrongWayCow(final char[][] field) {
-        // Fill in the code to return the [col, row] coordinate position of the
-        // head (letter 'c') of the wrong way cow!
-        
-        return null;
-    }
+public class TheWrongWayCow {
+	
+	public static int[] findWrongWayCow(final char[][] field) {
+		// Fill in the code to return the [col, row] coordinate position of the
+		// head (letter 'c') of the wrong way cow!
+		int up = 0;
+		int down = 0;
+		int right = 0;
+		int left = 0;
+		
+
+		int[] coordinatesUP = new int[2];
+		int[] coordinatesDOWN = new int[2];
+		int[] coordinatesRIGHT = new int[2];
+		int[] coordinatesLEFT = new int[2];
+
+	for (int i = 0; i < field.length; i++) {
+		for (int j = 0; j < field[i].length; j++) {
+if (field[i][j] == 'c') {
+	
+if (i < field.length-2 && field[i+1][j] == 'o' && field[i+2][j] == 'w') {
+right++;
+coordinatesRIGHT[0] = j;
+coordinatesRIGHT[1] = i;
+}
+if (i >= 2 && field[i-1][j] == 'o' && field[i-2][j] == 'w') {
+left++;
+coordinatesLEFT[0] = j;
+coordinatesLEFT[1] = i;		
+}
+if (j < field[i].length-2 && field[i][j+1] == 'o' && field[i][j+2] == 'w') {
+up++;	
+coordinatesUP[0] = j;
+coordinatesUP[1] = i;
+}
+if (j >= 2 && field[i][j-1] == 'o' && field[i][j-2] == 'w') {
+down++;
+coordinatesDOWN[0] = j;
+coordinatesDOWN[1] = i;		
+}
+}
+}
+}
+if (up == 1) {
+return coordinatesUP;	
+}
+if (down == 1) {
+return coordinatesDOWN;	
+}
+if (right == 1) {
+return coordinatesRIGHT;	
+}
+if (left == 1) {
+return coordinatesLEFT;	
+}
+
+		
+		
+		
+
+		return null;
+	}
 }
